@@ -1,4 +1,4 @@
-package src.envReader;
+package envReader;
 
 import java.io.FileInputStream;
 import java.io.IOException;

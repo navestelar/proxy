@@ -1,4 +1,4 @@
-package src;
+
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -15,9 +15,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import src.envReader.EnvProperty;
-import src.envReader.EnvReader;
-import src.view.template;
+import envReader.EnvProperty;
+import envReader.EnvReader;
+import view.template;
 
 public class ProxyServer {
   private static final long CACHE_EXPIRY = 60000;

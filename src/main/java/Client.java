@@ -1,9 +1,9 @@
-package src;
+
 
 import javax.swing.*;
 
-import src.envReader.EnvReader;
-import src.view.ClientView;
+import envReader.EnvReader;
+import view.ClientView;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

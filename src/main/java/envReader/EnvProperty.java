@@ -1,4 +1,4 @@
-package src.envReader;
+package envReader;
 
 public enum EnvProperty {
   DATABASE_CONNECTION("DATABASE_CONNECTION"),
