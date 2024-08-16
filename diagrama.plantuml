@@ -1,0 +1,105 @@
+@startuml
+!define Table(name,desc) class name as "desc"
+!define primaryKey(x) <u>x</u>
+
+package "br.com.navestelar" {
+
+    Table(ProxyServer, "Proxy Server") {
+        + Map<Integer, CacheEntry> cache
+        + ProxyConfig config
+        + ProxyServer(ProxyConfig)
+        + void start()
+    }
+
+    Table(CacheEntry, "Cache Entry") {
+        + Map<String, String> values
+        + long timestamp
+        + CacheEntry(Map<String, String>, long)
+        + Map<String, String> getValues()
+        + long getTimestamp()
+    }
+
+    Table(DatabaseConfig, "Database Configuration") {
+        + String getUrl()
+        + String getUser()
+        + String getHost()
+        + String getPort()
+        + String getPassword()
+        + String getDatabaseName()
+    }
+
+    Table(MySQLDatabaseConfig, "MySQL Database Configuration") {
+        + String user
+        + String host
+        + String port
+        + String password
+        + String databaseName
+        + String getUrl()
+        + String getUser()
+        + String getHost()
+        + String getPort()
+        + String getPassword()
+        + String getDatabaseName()
+    }
+
+    Table(PostgresDatabaseConfig, "Postgres Database Configuration") {
+        + String user
+        + String host
+        + String port
+        + String password
+        + String databaseName
+        + String getUrl()
+        + String getUser()
+        + String getHost()
+        + String getPort()
+        + String getPassword()
+        + String getDatabaseName()
+    }
+
+    Table(ProxyConfig, "Proxy Configuration") {
+        + String tableName
+        + String[] columns
+        + String proxyIp
+        + int proxyPort
+        + int timestamp
+        + List<DatabaseConfig> databaseConfigs
+        + static ProxyConfig.Builder builder()
+        + String getTableName()
+        + String[] getColumns()
+        + String getProxyIp()
+        + int getProxyPort()
+        + int getTimestamp()
+        + List<DatabaseConfig> getDatabaseConfigs()
+    }
+
+    Table(Client, "Client") {
+        + ClientView clientView
+        + Client()
+        + void start()
+        - void sendId()
+    }
+
+    Table(ClientView, "Client View") {
+        + JTextField idField
+        + JTextArea resultArea
+        + JTextField proxyIpField
+        + JTextField proxyPortField
+        + JButton sendButton
+        + ClientView(ActionListener)
+        + String getId()
+        + String getProxyIp()
+        + int getProxyPort()
+        + void setResultArea(String)
+    }
+
+    ProxyServer --> ProxyConfig : uses
+    ProxyServer --> CacheEntry : uses
+    ProxyServer --> DatabaseConfig : uses
+    ProxyConfig ..> DatabaseConfig : contains
+    DatabaseConfig <|-- MySQLDatabaseConfig : extends
+    DatabaseConfig <|-- PostgresDatabaseConfig : extends
+    Client --> ClientView : uses
+    ClientView ..> Client : interacts with
+}
+
+@enduml
