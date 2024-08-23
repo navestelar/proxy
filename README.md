@@ -7,6 +7,7 @@ In this OOP Java project, we implemented a proxy to cache database queries.
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-summary">Expanded Summary</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 ## 🚀 Technologies
@@ -50,5 +51,9 @@ The layout consists of a simple Java Swing interface:
     - Shows the details of the query results.
 
 This setup ensures efficient data retrieval and reduces the load on the database by caching frequent queries in the proxy.
+
+## 🔖 Expanded Summary
+
+You can figure out the Expanded Summary here: https://medium.com/@acch.escola/implementa%C3%A7%C3%A3o-de-um-servidor-proxy-com-cache-e-gerenciamento-de-falhas-em-m%C3%BAltiplos-bancos-de-be43ff3b3858
 
 Feel free to explore the project and understand how an OOP Java application can integrate with a proxy and a database for optimized data retrieval.
