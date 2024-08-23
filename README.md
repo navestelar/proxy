@@ -7,7 +7,7 @@ In this OOP Java project, we implemented a proxy to cache database queries.
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-summary">Expanded Summary</a>
+  <a href="#-expanded-summary">Expanded Summary</a>
 </p>
 
 ## 🚀 Technologies
